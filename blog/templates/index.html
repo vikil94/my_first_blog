@@ -5,16 +5,10 @@
     <title>Home</title>
   </head>
   <body>
-    <h1>Home Page</h1>
-    <h2>What is a client?</h2>
-    <p>{{ client }}</p>
-    <h2>What is a server?</h2>
-    <p>{{ server }}</p>
-    <h2>What is a HTTP request?</h2>
-    <p>{{ http_request }}</p>
-    <h2>What is a HTTP response?</h2>
-    <p>{{ http_response }}</p>
-    <h2>What is Django and why do we use it?</h2>
-    <p>{{ django }}</p>
+    <h1>Welcome to {{ name }}'s blog</h1>
+    {% for article in articles %}
+    <h2>{{ article }}</h1>
+    <p>{{ article.body }}</p>
+    {% endfor %}
   </body>
 </html>
