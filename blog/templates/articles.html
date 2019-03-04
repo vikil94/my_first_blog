@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Article</title>
+  </head>
+  <body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h2>{{ article }}</h2>
+      <p>{{ article.body }}</p>
+    {% endblock %}
+  </body>
+</html>

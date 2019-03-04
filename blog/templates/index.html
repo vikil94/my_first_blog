@@ -5,10 +5,13 @@
     <title>Home</title>
   </head>
   <body>
-    <h1>Welcome to {{ name }}'s blog</h1>
+  {% extends 'base.html' %}
+  {% block content %}
     {% for article in articles %}
+  <a href="{% url 'article_details' id=article.id %}">
     <h2>{{ article }}</h1>
-    <p>{{ article.body }}</p>
     {% endfor %}
+  </a>
+  {% endblock %}
   </body>
 </html>
