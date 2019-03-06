@@ -7,11 +7,15 @@
   <body>
   {% extends 'base.html' %}
   {% block content %}
+  <div class="articles">
+
+
     {% for article in articles %}
-  <a href="{% url 'article_details' id=article.id %}">
-    <h2>{{ article }}</h1>
+      <a href="{% url 'article_details' id=article.id %}">
+        <h2>{{ article }}</h1>
     {% endfor %}
-  </a>
+      </a>
+   </div>
   {% endblock %}
   </body>
 </html>

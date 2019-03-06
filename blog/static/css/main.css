@@ -1,0 +1,28 @@
+h1 {
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+body {
+  background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg);
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: black;
+}
+
+h2{
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
