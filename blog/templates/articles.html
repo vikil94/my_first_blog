@@ -8,7 +8,31 @@
     {% extends 'base.html' %}
     {% block content %}
       <h2>{{ article }}</h2>
-      <p>{{ article.body }}</p>
+      <p class="article_section">{{ article.body }}</p>
+      <h3>{{ article.published_date }}</h3>
+      <p class='author'>{{ article.author }}</p>
+
+      <h3>Comments:</h3>
+        <ul class='comment_section'>
+          {% for comment in article.comments.all %}
+          <p>Comment By: {{ comment.name }}</p>
+            <li>{{ comment.message }}</li>
+            {% endfor %}
+        </ul>
+
+       <form action="{% url 'create_comment' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="article" value="{{ article.pk }}">
+          <label for="comment_name">
+            <span>Name</span>
+            <input type="text" name="comment_name" value="">
+          </label>
+          <label for="comment_message">
+            <span>Message</span>
+            <textarea name="comment_message" rows="8" cols="80"></textarea>
+          </label>
+            <input type="submit"  value="submit">
+        </form>
     {% endblock %}
   </body>
 </html>

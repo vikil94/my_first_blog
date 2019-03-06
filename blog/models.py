@@ -9,3 +9,9 @@ class Article(models.Model):
 
     def __str__(self):
         return "\"{}\" by {} ".format(self.title, self.author)
+
+class Comment(models.Model):
+    name = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    message = models.TextField()
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
