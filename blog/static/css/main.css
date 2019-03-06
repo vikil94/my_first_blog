@@ -16,7 +16,7 @@ footer {
   background: black;
 }
 
-h2{
+h2 {
   font-family: 'Amatic SC', cursive;
   color: white;
   text-decoration: none;
@@ -32,20 +32,20 @@ h3 {
   opacity: 0.7;
 }
 
-a:hover {
-  color: black;
-}
-
 span {
   color: white;
 }
 
 input {
-  opacity: 0.1
+  opacity: 0.6;
+  background-color: grey;
+  color: #fff;
 }
 
 textarea {
-  opacity: 0.1
+  opacity: 0.6;
+  background-color: grey;
+  color: #fff;
 }
 
 .author {
@@ -55,5 +55,14 @@ textarea {
 .comment_section {
   color: white;
   list-style-type: none;
+}
 
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.articles:hover {
+  color: red;
+  background-color: red;
 }
