@@ -2,18 +2,22 @@ h1 {
   font-family: 'Amatic SC', cursive;
   display: flex;
   justify-content: center;
+  background-color: black;
   color: white;
 }
 
+header {
+  background-color: black;
+}
 body {
-  background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg);
+  background-image: url(https://avante.biz/wp-content/uploads/Creative-Backgrounds-Wallpapers/Creative-Backgrounds-Wallpapers-010.jpg);
 }
 
 footer {
   display: flex;
   justify-content: center;
   color: white;
-  background: black;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -28,8 +32,8 @@ h3 {
 
 .article_section{
   color: white;
-  background: black;
-  opacity: 0.7;
+  font-family: 'Amatic SC', cursive;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 span {
@@ -37,14 +41,13 @@ span {
 }
 
 input {
-  opacity: 0.6;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
 textarea {
   opacity: 0.6;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
@@ -63,6 +66,5 @@ textarea {
 }
 
 .articles:hover {
-  color: red;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
 }
