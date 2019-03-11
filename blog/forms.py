@@ -2,14 +2,14 @@ from django import forms
 from blog.models import Comment, Article
 import datetime
 from django.core.exceptions import ValidationError
-
-
+from django.forms import CharField, PasswordInput, Form
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['name', 'message']
+
 
 class ArticleForm(forms.ModelForm):
     class Meta:
@@ -28,3 +28,8 @@ class ArticleForm(forms.ModelForm):
             raise ValidationError('If draft is selected the published date must be in the future.')
         if draft == False and published > today:
             raise ValidationError('Published date cannot be a future date.')
+
+
+class LoginForm(Form):
+    username = CharField(label="User Name", max_length=64)
+    password = CharField(widget=PasswordInput())
