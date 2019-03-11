@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <form action="{% url 'create_article' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" name="" value="Create Article">
+      </form>
+    {% endblock %}
+  </body>
+</html>

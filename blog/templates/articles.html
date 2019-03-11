@@ -15,14 +15,17 @@
       <h3>Comments:</h3>
         <ul class='comment_section'>
           {% for comment in article.comments.all %}
-          <p>Comment By: {{ comment.name }}</p>
+          <p>By: {{ comment.name }}</p>
             <li>{{ comment.message }}</li>
+            <hr>
             {% endfor %}
         </ul>
 
        <form action="{% url 'create_comment' %}" method="post">
           {% csrf_token %}
-          <input type="hidden" name="article" value="{{ article.pk }}">
+
+          {{ form.as_p }}
+          <!-- <input type="hidden" name="article" value="{{ article.pk }}">
           <label for="comment_name">
             <span>Name</span>
             <input type="text" name="comment_name" value="">
@@ -30,7 +33,7 @@
           <label for="comment_message">
             <span>Comment</span>
             <textarea name="comment_message" rows="1" cols="80"></textarea>
-          </label>
+          </label> -->
             <input type="submit"  value="submit">
         </form>
     {% endblock %}
