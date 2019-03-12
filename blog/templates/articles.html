@@ -12,7 +12,8 @@
       <h3>{{ article.published_date }}</h3>
       <p class='author'>Wriiten By: {{ article.author }}</p>
       <p class='user'>Added by: {{ article.user }}</p>
-      
+
+      <p><a href="{% url 'edit_article' article.id %}">Edit Article</a></p>
       <h3>Comments:</h3>
         <ul class='comment_section'>
           {% for comment in article.comments.all %}
@@ -21,6 +22,8 @@
             <hr>
             {% endfor %}
         </ul>
+
+
 
        <form action="{% url 'create_comment' %}" method="post">
           {% csrf_token %}

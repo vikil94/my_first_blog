@@ -12,16 +12,24 @@
   </head>
   <body>
     <header>
-      <h1>Vikil's Blog</h1>
+       <a href="{% url 'home' %}"><h1>Vikil's Blog</h1></a>
     </header>
     <nav>
     {% if request.user.is_authenticated %}
     <!-- display link to log out -->
     <a href="{% url 'logout' %}">Log out</a>
+    <li>Logged in as: {{ request.user.username }}</li>
     {% else %}
     <!-- display link to login page -->
     <a href="{% url 'login' %}">Log in</a>
     {% endif %}
+    <a href="{% url 'signup' %}">Signup</a>
+    <li>
+      <a href="{% url 'create_article' %}">Create a new article</a>
+    </li>
+      {% for message in messages %}
+          <p>{{ message }}</p>
+      {% endfor %}
     </nav>
     {% block content %}
     {% endblock %}

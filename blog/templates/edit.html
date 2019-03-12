@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  {% extends 'base.html' %}
+  {% block content %}
+    <h2>Edit Article</h2>
+
+    {{ form.errors }}
+    <form action="{% url 'edit_article' article.id %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" name="" value="Update article">
+    </form>
+  {% endblock %}
+  </body>
+</html>

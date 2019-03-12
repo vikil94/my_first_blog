@@ -6,8 +6,18 @@ h1 {
   color: white;
 }
 
+li {
+  color: white;
+  margin: 10px;
+  list-style-type: none;
+}
+
 header {
   background-color: black;
+}
+
+p {
+  color: white
 }
 
 html {
