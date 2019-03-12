@@ -17,14 +17,14 @@
     <nav>
     {% if request.user.is_authenticated %}
     <!-- display link to log out -->
-    <a href="{% url 'logout' %}">Log out</a>
+    <a class="login" href="{% url 'logout' %}">Log out</a>
     <li>Logged in as: {{ request.user.username }}</li>
     {% else %}
     <!-- display link to login page -->
-    <a href="{% url 'login' %}">Log in</a>
+    <a class="login" href="{% url 'login' %}">Log in</a>
     {% endif %}
-    <a href="{% url 'signup' %}">Signup</a>
-    <li>
+    <a class="signup" href="{% url 'signup' %}">Signup</a>
+    <li class="create_article">
       <a href="{% url 'create_article' %}">Create a new article</a>
     </li>
       {% for message in messages %}

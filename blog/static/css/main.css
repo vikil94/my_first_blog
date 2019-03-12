@@ -12,12 +12,18 @@ li {
   list-style-type: none;
 }
 
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px;
+}
+
 header {
   background-color: black;
 }
 
 p {
-  color: white
+  color: white;
 }
 
 html {
@@ -27,6 +33,7 @@ html {
 a {
   text-decoration: none;
   color: white;
+  font-family: 'Amatic SC', cursive;
 }
 
 footer {
@@ -86,5 +93,17 @@ textarea {
 }
 
 .articles:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.create_article:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.login:hover{
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.signup:hover {
   background-color: rgba(255, 0, 0, 0.3);
 }
